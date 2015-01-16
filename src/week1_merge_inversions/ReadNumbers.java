@@ -8,9 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ReadNumbers {
-	public static void main(String[] args) throws IOException {
+	public static int[] txt2IntArr() throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(
-				"src/week1_merge_inversions/integerArray.txt"));
+				"src/week1_merge_inversions/mergetest.txt"));
 		// read to a list first, if number of lines is unknown
 		List<Integer> myList = new ArrayList<Integer>();
 		try {
@@ -31,7 +31,9 @@ public class ReadNumbers {
 		for (Integer num : myList) {
 			myArray[i++] = num;
 		}
-		System.out.println("Result size: " + myArray.length);
+		
+		return myArray;
+		//System.out.println("Result size: " + myArray.length);
 		// System.out.println("Result: " + Arrays.toString(myArray));
 	}
 }
